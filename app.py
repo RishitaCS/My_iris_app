@@ -41,7 +41,7 @@ input_data = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
 # Prediction
 if st.button("Predict"):
     prediction = model.predict(input_data)[0]
-    pred_prob = model.predict_prob(input_data)[0]
+    pred_prob = model.predict_proba(input_data)[0]
     st.success(f"Predicted Species: **{target_names[prediction]}**")
     st.write("Prediction Probabilities:")
     st.bar_chart(pred_prob)
